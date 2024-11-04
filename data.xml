@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cart>
+	<group>
+		<title>Entrante</title>
+		<plate>
+			<name>Ensalada César</name>
+			<descripcion>Ensalada fresca con lechuga, pollo a la parrilla, crutones y aderezo César.</descripcion>
+			<precio>12.50</precio>
+		</plate>
+		<plate>
+			<name>Bruschetta</name>
+			<descripcion>Rebanadas de pan tostado con tomate, albahaca y aceite de oliva.</descripcion>
+			<precio>8.00</precio>
+		</plate>
+		<plate>
+			<name>Sopa de Tomate</name>
+			<descripcion>Sopa cremosa de tomate con albahaca y un toque de crema.</descripcion>
+			<precio>7.50</precio>
+		</plate>
+		<plate>
+			<name>Rollitos de Primavera</name>
+			<descripcion>Rollitos rellenos de verduras frescas y fideos de arroz, acompañados de salsa agridulce.</descripcion>
+			<precio>9.00</precio>
+		</plate>
+		<plate>
+			<name>Tortilla Española</name>
+			<descripcion>Clásica tortilla de patatas con cebolla, servida con pan.</descripcion>
+			<precio>10.00</precio>
+		</plate>
+	</group>
+	<group>
+		<title>Principales</title>
+		<plate>
+			<name>Filete a la Parrilla</name>
+			<descripcion>Delicioso filete de res a la parrilla, servido con papas asadas y verduras al vapor.</descripcion>
+			<precio>22.00</precio>
+		</plate>
+		<plate>
+			<name>Paella Mixta</name>
+			<descripcion>Arroz sazonado con mariscos y pollo, cocinado a fuego lento con especias tradicionales.</descripcion>
+			<precio>18.00</precio>
+		</plate>
+		<plate>
+			<name>Lasagna Vegetariana</name>
+			<descripcion>Capas de pasta con verduras frescas, salsa de tomate y queso gratinado.</descripcion>
+			<precio>16.50</precio>
+		</plate>
+		<plate>
+			<name>Pollo al Limón</name>
+			<descripcion>Pequeñas pechugas de pollo marinadas en limón, acompañadas de arroz y ensalada.</descripcion>
+			<precio>15.00</precio>
+		</plate>
+		<plate>
+			<name>Salmón a la Plancha</name>
+			<descripcion>Filete de salmón a la plancha, servido con puré de patatas y espárragos.</descripcion>
+			<precio>20.00</precio>
+		</plate>
+	</group>
+	<group>
+		<title>Postres</title>
+		<plate>
+			<name>3 leches</name>
+			<descripcion>Pastel 3 leches: </descripcion>
+			<precio>22.00</precio>
+		</plate>
+		<plate>
+			<name>Paella Mixta</name>
+			<descripcion>Arroz sazonado con mariscos y pollo, cocinado a fuego lento con especias tradicionales.</descripcion>
+			<precio>18.00</precio>
+		</plate>
+		<plate>
+			<name>Lasagna Vegetariana</name>
+			<descripcion>Capas de pasta con verduras frescas, salsa de tomate y queso gratinado.</descripcion>
+			<precio>16.50</precio>
+		</plate>
+		<plate>
+			<name>Pollo al Limón</name>
+			<descripcion>Pequeñas pechugas de pollo marinadas en limón, acompañadas de arroz y ensalada.</descripcion>
+			<precio>15.00</precio>
+		</plate>
+		<plate>
+			<name>Salmón a la Plancha</name>
+			<descripcion>Filete de salmón a la plancha, servido con puré de patatas y espárragos.</descripcion>
+			<precio>20.00</precio>
+		</plate>
+	</group>
+</cart>
