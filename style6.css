@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+}
+
+
+#cart-container {
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.menu-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    overflow: hidden;
+}
+
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-header p {
+    font-size: 1.1em;
+    color: #666;
+    font-style: italic;
+}
+
+
+.menu-section {
+    margin-bottom: 25px;
+    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.menu-section h2 {
+    font-size: 1.8em;
+    color: #444;
+    border-bottom: 2px solid #8AE9C1;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.menu-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+}
+
+
+.menu-item-content {
+    flex: 1; 
+}
+
+
+.price {
+    font-size: 1.1em;
+    color: #72A276;
+    font-weight: bold;
+    margin-left: 20px;
+    white-space: nowrap; 
+}
+
+
+.menu-item p {
+    font-size: 0.95em;
+    color: #777;
+    margin-top: 5px;
+    line-height: 1.4;
+}
