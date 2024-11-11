@@ -4,75 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú del Restaurante</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style6.css">
 </head>
 <body>
     <h1>Menú del Restaurante</h1>
     <section id="cart-container">
-
         <div id="menu-container"></div>
+    </section>
 
     <script>
         fetch("https://raw.githubusercontent.com/zjonkg/Restaurant/main/data.xml")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(xmlText => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-
-       
-            const groups = xmlDoc.getElementsByTagName('group');
-            const menuContainer = document.getElementById('menu-container');
-
-           
-            for (let i = 0; i < groups.length; i++) {
-                const group = groups[i];
-                const title = group.getElementsByTagName('title')[0].textContent;
-
-              
-                const section = document.createElement('section');
-                section.classList.add('menu-section');
-                
-                
-                const sectionTitle = document.createElement('h2');
-                sectionTitle.textContent = title;
-                section.appendChild(sectionTitle);
-
-              
-                const plates = group.getElementsByTagName('plate');
-                for (let j = 0; j < plates.length; j++) {
-                    const plate = plates[j];
-                    const name = plate.getElementsByTagName('name')[0].textContent;
-                    const description = plate.getElementsByTagName('descripcion')[0].textContent;
-                    const price = plate.getElementsByTagName('precio')[0].textContent;
-
-         
-                    const plateDiv = document.createElement('div');
-                    plateDiv.classList.add('menu-item');
-
-                    plateDiv.innerHTML = `
-                        <div class="menu-item-content">
-                            <h3>${name}</h3>
-                            <p>${description}</p>
-                        </div>
-                        <span class="price">$${price}</span>
-                    `;
-
-                    section.appendChild(plateDiv);
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
+                return response.text();
+            })
+            .then(xmlText => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
 
-          
-                menuContainer.appendChild(section);
-            }
-        })
-        .catch(error => {
-            console.error(`Hubo un problema con la operación fetch:`, error);
-        });
+                // Acceder a <cart> y luego a los <group>
+                const groups = xmlDoc.getElementsByTagName('group');
+                const menuContainer = document.getElementById('menu-container');
+
+                for (let i = 0; i < groups.length; i++) {
+                    const group = groups[i];
+                    const title = group.getElementsByTagName('title')[0].textContent;
+
+                    const section = document.createElement('section');
+                    section.classList.add('menu-section');
+
+                    const sectionTitle = document.createElement('h2');
+                    sectionTitle.textContent = title;
+                    section.appendChild(sectionTitle);
+
+                    const plates = group.getElementsByTagName('plate');
+                    for (let j = 0; j < plates.length; j++) {
+                        const plate = plates[j];
+                        const name = plate.getElementsByTagName('name')[0].textContent;
+                        const description = plate.getElementsByTagName('descripcion')[0].textContent;
+                        const price = plate.getElementsByTagName('precio')[0].textContent;
+
+                        const plateDiv = document.createElement('div');
+                        plateDiv.classList.add('menu-item');
+
+                        plateDiv.innerHTML = `
+                            <div class="menu-item-content">
+                                <h3>${name}</h3>
+                                <p>${description}</p>
+                            </div>
+                            <span class="price">$${price}</span>
+                        `;
+
+                        section.appendChild(plateDiv);
+                    }
+
+                    menuContainer.appendChild(section);
+                }
+            })
+            .catch(error => {
+                console.error(`Hubo un problema con la operación fetch:`, error);
+            });
     </script>
-    </section>
 </body>
 </html>
