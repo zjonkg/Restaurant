@@ -1,96 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cart>
     <group>
-        <title>Entrante</title>
-        <plate>
-            <name>Ensalada César</name>
-            <descripcion>Ensalada fresca con lechuga, pollo a la parrilla, crutones y aderezo César.</descripcion>
-            <precio>12.50</precio>
-            <imagen>https://images.pexels.com/photos/27603332/pexels-photo-27603332/free-photo-of-ensalada-tomates-tabla-de-cortar-naturaleza-muerta.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Bruschetta</name>
-            <descripcion>Rebanadas de pan tostado con tomate, albahaca y aceite de oliva.</descripcion>
-            <precio>8.00</precio>
-            <imagen>https://images.pexels.com/photos/15846842/pexels-photo-15846842/free-photo-of-cafe-desayuno.jpeg?auto=compress&cs=tinysrgb&w=600</imagen>
-        </plate>
-        <plate>
-            <name>Sopa de Tomate</name>
-            <descripcion>Sopa cremosa de tomate con albahaca y un toque de crema.</descripcion>
-            <precio>7.50</precio>
-            <imagen>https://images.pexels.com/photos/20473714/pexels-photo-20473714/free-photo-of-bol-tazon-cuenco-aperitivo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Rollitos de Primavera</name>
-            <descripcion>Rollitos rellenos de verduras frescas y fideos de arroz, acompañados de salsa agridulce.</descripcion>
-            <precio>9.00</precio>
-            <imagen>https://images.pexels.com/photos/6645917/pexels-photo-6645917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Tortilla Española</name>
-            <descripcion>Clásica tortilla de patatas con cebolla, servida con pan.</descripcion>
-            <precio>10.00</precio>
-            <imagen>https://images.pexels.com/photos/20416752/pexels-photo-20416752/free-photo-of-plato-comida-fotografia-de-comida-enfoque-selectivo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-    </group>
-    <group>
-        <title>Principales</title>
-        <plate>
-            <name>Filete a la Parrilla</name>
-            <descripcion>Delicioso filete de res a la parrilla, servido con papas asadas y verduras al vapor.</descripcion>
-            <precio>22.00</precio>
-            <imagen>https://images.pexels.com/photos/6542787/pexels-photo-6542787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Paella Mixta</name>
-            <descripcion>Arroz sazonado con mariscos y pollo, cocinado a fuego lento con especias tradicionales.</descripcion>
-            <precio>18.00</precio>
-            <imagen>https://images.pexels.com/photos/11689800/pexels-photo-11689800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Lasagna Vegetariana</name>
-            <descripcion>Capas de pasta con verduras frescas, salsa de tomate y queso gratinado.</descripcion>
-            <precio>16.50</precio>
-            <imagen>https://images.pexels.com/photos/4162496/pexels-photo-4162496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Pollo al Limón</name>
-            <descripcion>Pequeñas pechugas de pollo marinadas en limón, acompañadas de arroz y ensalada.</descripcion>
-            <precio>15.00</precio>
-            <imagen>https://images.pexels.com/photos/6210747/pexels-photo-6210747.jpeg?auto=compress&cs=tinysrgb&w=600</imagen>
-        </plate>
-        <plate>
-            <name>Salmón a la Plancha</name>
-            <descripcion>Filete de salmón a la plancha, servido con puré de patatas y espárragos.</descripcion>
-            <precio>20.00</precio>
-            <imagen>https://images.pexels.com/photos/7627414/pexels-photo-7627414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-    </group>
-    <group>
-        <title>Postres</title>
-        <plate>
-            <name>Pastel Tres Leches</name>
-            <descripcion>Pastel esponjoso bañado en tres tipos de leche, decorado con crema batida.</descripcion>
-            <precio>6.50</precio>
-            <imagen>https://cdn0.recetasgratis.net/es/posts/0/1/9/torta_tres_leches_8910_orig.jpg</imagen>
-        </plate>
-        <plate>
-            <name>Flan de Caramelo</name>
-            <descripcion>Flan suave y cremoso con caramelo casero.</descripcion>
-            <precio>5.00</precio>
-            <imagen>https://images.pexels.com/photos/302468/pexels-photo-302468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Tarta de Queso</name>
-            <descripcion>Tarta de queso clásica servida con salsa de frambuesas.</descripcion>
-            <precio>7.00</precio>
-            <imagen>https://images.pexels.com/photos/4040696/pexels-photo-4040696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-        <plate>
-            <name>Helado Artesanal</name>
-            <descripcion>Helado artesanal en variedad de sabores: chocolate, vainilla y fresa.</descripcion>
-            <precio>4.50</precio>
-            <imagen>https://images.pexels.com/photos/5060373/pexels-photo-5060373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</imagen>
-        </plate>
-    </group>
+		<title>Entrante</title>
+		<plate>
+			<name>Ensalada César</name>
+			<descripcion>Ensalada fresca con lechuga, pollo a la parrilla, crutones y aderezo César.</descripcion>
+			<precio>12.50</precio>
+		</plate>
+		<plate>
+			<name>Bruschetta</name>
+			<descripcion>Rebanadas de pan tostado con tomate, albahaca y aceite de oliva.</descripcion>
+			<precio>8.00</precio>
+		</plate>
+		<plate>
+			<name>Sopa de Tomate</name>
+			<descripcion>Sopa cremosa de tomate con albahaca y un toque de crema.</descripcion>
+			<precio>7.50</precio>
+		</plate>
+		<plate>
+			<name>Rollitos de Primavera</name>
+			<descripcion>Rollitos rellenos de verduras frescas y fideos de arroz, acompañados de salsa agridulce.</descripcion>
+			<precio>9.00</precio>
+		</plate>
+		<plate>
+			<name>Tortilla Española</name>
+			<descripcion>Clásica tortilla de patatas con cebolla, servida con pan.</descripcion>
+			<precio>10.00</precio>
+		</plate>
+	</group>
+	<group>
+		<title>Principales</title>
+		<plate>
+			<name>Filete a la Parrilla</name>
+			<descripcion>Delicioso filete de res a la parrilla, servido con papas asadas y verduras al vapor.</descripcion>
+			<precio>22.00</precio>
+		</plate>
+		<plate>
+			<name>Paella Mixta</name>
+			<descripcion>Arroz sazonado con mariscos y pollo, cocinado a fuego lento con especias tradicionales.</descripcion>
+			<precio>18.00</precio>
+		</plate>
+		<plate>
+			<name>Lasagna Vegetariana</name>
+			<descripcion>Capas de pasta con verduras frescas, salsa de tomate y queso gratinado.</descripcion>
+			<precio>16.50</precio>
+		</plate>
+		<plate>
+			<name>Pollo al Limón</name>
+			<descripcion>Pequeñas pechugas de pollo marinadas en limón, acompañadas de arroz y ensalada.</descripcion>
+			<precio>15.00</precio>
+		</plate>
+		<plate>
+			<name>Salmón a la Plancha</name>
+			<descripcion>Filete de salmón a la plancha, servido con puré de patatas y espárragos.</descripcion>
+			<precio>20.00</precio>
+		</plate>
+	</group>
+	<group>
+		<title>Postres</title>
+		<plate>
+			<name>Pastel Tres Leches</name>
+			<descripcion>Pastel esponjoso bañado en tres tipos de leche, decorado con crema batida.</descripcion>
+			<precio>6.50</precio>
+		</plate>
+		<plate>
+			<name>Flan de Caramelo</name>
+			<descripcion>Flan suave y cremoso con caramelo casero.</descripcion>
+			<precio>5.00</precio>
+		</plate>
+		<plate>
+			<name>Tarta de Queso</name>
+			<descripcion>Tarta de queso clásica servida con salsa de frambuesas.</descripcion>
+			<precio>7.00</precio>
+		</plate>
+		<plate>
+			<name>Helado Artesanal</name>
+			<descripcion>Helado artesanal en variedad de sabores: chocolate, vainilla y fresa.</descripcion>
+			<precio>4.50</precio>
+		</plate>
+	</group>
 </cart>
