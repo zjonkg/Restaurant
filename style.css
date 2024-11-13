@@ -1,105 +1,158 @@
-
-* {
+  /* Reset de estilo básico */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f3f3f3;
-    font-family: 'Roboto', sans-serif;
-}
-h1{
-    text-align: center;
 }
 
-
-#cart-container {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    background: url('https://png.pngtree.com/thumb_back/fw800/background/20231231/pngtree-vector-illustration-of-a-restaurant-menu-design-with-food-and-drinks-image_13914731.png') no-repeat center center fixed; 
+    background-size: cover;
 }
 
-
-.menu-container {
-    width: 100%;
-    max-width: 700px;
-    background-color: #ffffff;
+/* Contenedor principal del menú */
+#menu {
+    width: 70%;
+    max-width: 1500px; /* Tamaño máximo para el contenedor */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+    -webkit-backdrop-filter: blur(10px); /* Compatible con Safari */
     overflow: hidden;
+    box-sizing: border-box;
 }
 
-
-.menu-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.menu-header h1 {
-    font-family: 'Playfair Display', serif;
+/* Encabezado */
+h1 {
     font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
 }
 
-.menu-header p {
-    font-size: 1.1em;
-    color: #666;
-    font-style: italic;
+/* Estilo de los grupos con efecto glass */
+.group {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(8px); /* Desenfoque en el fondo de cada grupo */
+    -webkit-backdrop-filter: blur(8px); /* Compatible con Safari */
 }
 
-
-.menu-section {
-    margin-bottom: 25px;
-    padding: 15px 0;
-    border-top: 1px solid #eaeaea;
-}
-
-.menu-section h2 {
+.group h2 {
     font-size: 1.8em;
-    color: #444;
-    border-bottom: 2px solid #8AE9C1;
-    padding-bottom: 5px;
+    color: #3498db; /* Azul suave */
     margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-
-.menu-item {
+/* Usamos Flexbox para mostrar dos recetas por fila */
+.plate-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px dashed #ddd;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-.menu-item h3 {
-    font-size: 1.2em;
-    color: #333;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 5px;
+/* Estilo de cada plato con efecto glass */
+.plate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: calc(50% - 10px); /* Dos platos por fila */
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.1s ease;
+    backdrop-filter: blur(6px); /* Desenfoque en el fondo del plato */
+    -webkit-backdrop-filter: blur(6px); /* Compatible con Safari */
 }
 
-
-.menu-item-content {
-    flex: 1; 
+.plate:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.plate img {
+    border-radius: 8px;
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px; /* Tamaño fijo para las imágenes */
+    object-fit: cover; /* Mantener la relación de aspecto */
+}
 
-.price {
-    font-size: 1.1em;
-    color: #72A276;
+.plate .info {
+    text-align: center;
+}
+
+.plate h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
     font-weight: bold;
-    margin-left: 20px;
-    white-space: nowrap; 
 }
 
+.plate p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #666;
+}
 
-.menu-item p {
-    font-size: 0.95em;
-    color: #777;
-    margin-top: 5px;
-    line-height: 1.4;
+.plate p strong {
+    color: #e67e22; /* Color cálido para el precio */
+}
+
+/* Estilos para el precio */
+.plate p:last-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e67e22; /* Color cálido para el precio */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .plate-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .plate {
+        width: 90%; /* Usar todo el ancho disponible en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .group h2 {
+        font-size: 1.6em;
+    }
+
+    .plate h3 {
+        font-size: 1.3em;
+    }
+
+    .plate p {
+        font-size: 1em;
+    }
 }

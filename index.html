@@ -4,67 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú del Restaurante</title>
-    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Menú del Restaurante</h1>
-    <section id="cart-container">
-        <div id="menu-container"></div>
-    </section>
+    <div id="menu"></div>
 
     <script>
-        fetch("https://raw.githubusercontent.com/zjonkg/Restaurant/main/data.xml")
+        const url = 'https://raw.githubusercontent.com/zjonkg/Restaurant/main/data.xml';
+
+        fetch(url)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Error en la red');
                 }
                 return response.text();
             })
-            .then(xmlText => {
+            .then(data => {
+                // Parsear el XML
                 const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const xmlDoc = parser.parseFromString(data, "text/xml");
 
-                // Acceder a <cart> y luego a los <group>
+                // Obtener el elemento del menú
+                const menuDiv = document.getElementById('menu');
                 const groups = xmlDoc.getElementsByTagName('group');
-                const menuContainer = document.getElementById('menu-container');
 
-                for (let i = 0; i < groups.length; i++) {
-                    const group = groups[i];
+                for (let group of groups) {
                     const title = group.getElementsByTagName('title')[0].textContent;
-
-                    const section = document.createElement('section');
-                    section.classList.add('menu-section');
-
-                    const sectionTitle = document.createElement('h2');
-                    sectionTitle.textContent = title;
-                    section.appendChild(sectionTitle);
-
                     const plates = group.getElementsByTagName('plate');
-                    for (let j = 0; j < plates.length; j++) {
-                        const plate = plates[j];
+
+                    // Crear un contenedor para el grupo
+                    const groupDiv = document.createElement('div');
+                    groupDiv.classList.add('group');
+                    groupDiv.innerHTML = `<h2>${title}</h2>`;
+
+                    // Crear contenedor para los platos (2 por fila)
+                    const plateContainer = document.createElement('div');
+                    plateContainer.classList.add('plate-container');
+
+                    for (let plate of plates) {
                         const name = plate.getElementsByTagName('name')[0].textContent;
                         const description = plate.getElementsByTagName('descripcion')[0].textContent;
                         const price = plate.getElementsByTagName('precio')[0].textContent;
+                        const imageUrl = plate.getElementsByTagName('image')[0].textContent; // Asegúrate de que esta sea la etiqueta correcta
 
+                        // Crear un contenedor para el plato
                         const plateDiv = document.createElement('div');
-                        plateDiv.classList.add('menu-item');
-
-                        plateDiv.innerHTML = `
-                            <div class="menu-item-content">
+                        plateDiv.classList.add('plate');
+                        plateDiv.innerHTML = ` 
+                            <img src="${imageUrl}" alt="${name}">
+                            <div class="info">
                                 <h3>${name}</h3>
                                 <p>${description}</p>
+                                <p><strong>Precio: $${price}</strong></p>
                             </div>
-                            <span class="price">$${price}</span>
                         `;
 
-                        section.appendChild(plateDiv);
+                        // Añadir el plato al contenedor de platos
+                        plateContainer.appendChild(plateDiv);
                     }
 
-                    menuContainer.appendChild(section);
+                    // Añadir el contenedor de platos al grupo
+                    groupDiv.appendChild(plateContainer);
+
+                    // Añadir el grupo al menú
+                    menuDiv.appendChild(groupDiv);
                 }
             })
             .catch(error => {
-                console.error(`Hubo un problema con la operación fetch:`, error);
+                console.error('Error al cargar el XML:', error);
             });
     </script>
 </body>
