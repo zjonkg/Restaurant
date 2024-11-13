@@ -32,6 +32,12 @@
 			<precio>10.00</precio>
 			<image>https://images.pexels.com/photos/20416752/pexels-photo-20416752/free-photo-of-plato-comida-fotografia-de-comida-enfoque-selectivo.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1</image>
 		</plate>
+		<plate>
+			<name>Turrón salado</name>
+			<descripcion>Turrón salada de queso y frutos secos.</descripcion>
+			<precio>7.50</precio>
+			<image>https://stylelovely.com/wp-content/uploads/turron-salado-cocinandoentreolivos-recetas-de-entrantes.png</image>
+		</plate>
 	</group>
 	<group>
 		<title>Principales</title>
